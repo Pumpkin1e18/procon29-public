@@ -19,19 +19,20 @@ Pythonのコードはすべてc++で書き直しています。
 ## 環境構築
 動く保証はないです。
 
-MinGW-w64(threadのため)  
-http://text.baldanders.info/remark/2018/03/mingw-w64/  
-GnuWin32(makeのため)  
-https://qiita.com/tokikaze0604/items/e13c04192762f8d4ec85  
-上記2つを導入したら下記4つを順に実行する  
-・c++\server.cppを[g++ -o server.exe server.cpp -lws2_32]でコンパイル・実行  
-・Environment\Visualizer.exeをダブルクリックで実行  
-・c++\Interface.cppをmakeで実行  
-・c++\QR_Reader.pyで読み取ったQRコードの文字列をコピペ  
-※文字化けしてたら[chcp 65001]  
+下記2つのツールをインストールする
+- [MinGW-w64](http://text.baldanders.info/remark/2018/03/mingw-w64/) (threadのため)
+- [GnuWin32](https://qiita.com/tokikaze0604/items/e13c04192762f8d4ec85) (makeのため)  
+
+下記4つを順に実行する  
+1. `c++/server.cpp`を`g++ -o server.exe server.cpp -lws2_32`でコンパイル・実行  
+2. `Environment/Visualizer.exe`をダブルクリックで実行  
+3. `c++/Interface.cpp`を`make`で実行  
+4. `c++/QR_Reader.py`で読み取ったQRコードの文字列をコピペ  
+
+※文字化けしてたら`chcp 65001`  
 ※QRコードのサンプルはQR_sampleにあります  
-※c++版ではプレイヤーの選択はc++\Interface.cppからしかできません
-他設定はc++\Interface.cpp開いて環境設定の欄をいじってください  
+※c++版ではプレイヤーの選択は`c++/Interface.cpp`からしかできません
+他設定は`c++/Interface.cpp`開いて環境設定の欄をいじってください  
 あとはVisualizerで操作するだけ  
 
 ## 簡単なアルゴリズムの説明
